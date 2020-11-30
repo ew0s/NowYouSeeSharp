@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -36,11 +37,11 @@ namespace WPFCyberSecurityInfoParser.View
             using (var webClient = new WebClient())
             {
                 const string url = "https://bdu.fstec.ru/files/documents/thrlist.xlsx";
-                const string fileName = "thrlist.xlsx";
+                const string path = "thrlist.xlsx";
 
                 try
                 {
-                    webClient.DownloadFile(url, fileName);
+                    webClient.DownloadFile(url, path);
                 }
                 catch (Exception)
                 {

@@ -75,6 +75,9 @@
     <Compile Include="View\DownloadDataDialogPage.xaml.cs">
       <DependentUpon>DownloadDataDialogPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewFullDatabase.xaml.cs">
+      <DependentUpon>ViewFullDatabase.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DownloadDataDialogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewFullDatabase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

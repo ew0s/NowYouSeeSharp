@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCyberSecurityInfoParser"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d" Icon="Images/cctv.png" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
 
     <Grid>
@@ -44,7 +45,7 @@
             </Grid>
 
             <StackPanel Grid.Row="1">
-                <Button x:Name="ButtonShowFullInfo" Margin="5" Background="BlueViolet" BorderBrush="BlueViolet">
+                <Button x:Name="ButtonShowFullInfo" Margin="5" Background="BlueViolet" BorderBrush="BlueViolet" Click="ButtonShowFullInfo_OnClick">
                     <Grid Width="185">
                         <materialDesign:PackIcon Kind="Show" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="SHOW FULL INFO" FontFamily="Arial"/>
@@ -77,6 +78,12 @@
             </StackPanel>
         </Grid>
 
+        <Grid Grid.Row="1" Grid.Column="1">
+            <ScrollViewer>
+                
+            </ScrollViewer>
+        </Grid>
+
         <Grid x:Name="GridBarTitle" Grid.ColumnSpan="2" Background="BlueViolet" MouseDown="GridBarTitle_OnMouseDown">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
                 <Button x:Name="ButtonHide" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonHide_Click">
@@ -92,6 +99,7 @@
             </StackPanel>
         </Grid>
 
+        <Frame Name="MainFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
         <TextBlock HorizontalAlignment="Left" Margin="111,22,0,0" Grid.Row="1" TextWrapping="Wrap" Text="FSTEK info parser" VerticalAlignment="Top" Height="35" Width="105" FontFamily="Arial Black" Foreground="White"/>
     </Grid>
 </Window>

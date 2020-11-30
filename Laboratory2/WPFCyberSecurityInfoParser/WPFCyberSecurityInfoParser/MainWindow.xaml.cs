@@ -49,5 +49,10 @@ namespace WPFCyberSecurityInfoParser
             var downloadDataDialogPage = new DownloadDataDialogPage();
             downloadDataDialogPage.ShowDialog();
         }
+
+        private void ButtonShowFullInfo_OnClick(object sender, RoutedEventArgs e)
+        {
+           MainFrame.NavigationService.Navigate(new Uri("View/ViewFullDatabase.xaml", UriKind.Relative));
+        }
     }
 }

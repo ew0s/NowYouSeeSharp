@@ -44,7 +44,7 @@
                 <Button Margin="15" Background="BlueViolet" BorderBrush="BlueViolet" FontFamily="Arial" Height="70">
                     <Grid Width="300">
                         <materialDesign:PackIcon Kind="Download" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="DOWNLOAD FROM LOCAL FILE SYSTEM" FontFamily="Bahnschrift Light"/>
+                        <TextBlock HorizontalAlignment="Center" Text="DOWNLOAD FROM LOCAL FILE SYSTEM" FontFamily="Arial"/>
                     </Grid>
                 </Button>
             </StackPanel>
