@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPFCyberSecurityInfoParser.View.AttentionPages.UnableToFindDatabasePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCyberSecurityInfoParser"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Height="150" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="#FFDADADA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="0,0,1,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE8E8E8" Offset="0.992"/>
+                    <GradientStop Color="#FFDADADA"/>
+                    <GradientStop Color="#FFDADADA" Offset="0.982"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect Color="#FFC7C7C7" RenderingBias="Quality" ShadowDepth="1" BlurRadius="20"/>
+            </Grid.Effect>
+            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="Unable to find database make sure it downloaded." VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button x:Name="ButtonOk" Margin="10" Background="BlueViolet" BorderBrush="BlueViolet" Height="50" Width="100" Click="ButtonClose_OnClick">
+                <TextBlock TextWrapping="Wrap" Text="OK" FontFamily="Arial"/>
+            </Button>
+        </Grid>
+
+
+
+        <Grid x:Name="GridBarTitle" Background="BlueViolet">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_OnClick">
+                    <materialDesign:PackIcon Kind="Close"></materialDesign:PackIcon>
+                </Button>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,4" TextWrapping="Wrap" TextAlignment="Left" Text="Attention" VerticalAlignment="Bottom" Height="20" Width="108" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>

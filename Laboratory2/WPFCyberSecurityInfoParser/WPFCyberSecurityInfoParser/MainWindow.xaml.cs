@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFCyberSecurityInfoParser.View;
 
 namespace WPFCyberSecurityInfoParser
 {
@@ -41,6 +42,12 @@ namespace WPFCyberSecurityInfoParser
         private void GridBarTitle_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void ButtonUpdateInfo_OnClick(object sender, RoutedEventArgs e)
+        {
+            var downloadDataDialogPage = new DownloadDataDialogPage();
+            downloadDataDialogPage.ShowDialog();
         }
     }
 }

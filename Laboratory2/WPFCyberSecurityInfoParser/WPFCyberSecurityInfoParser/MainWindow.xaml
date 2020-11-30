@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCyberSecurityInfoParser"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent" WindowStyle="None">
+        mc:Ignorable="d" Icon="Images/cctv.png" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
 
     <Grid>
         <Grid.Background>
@@ -40,11 +40,11 @@
             </Grid.Effect>
 
             <Grid Background="#FFA46FE4">
-                <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="security-camera.png" Margin="-1,0,0,0"/>
+                <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Images/security-camera.png" Margin="-1,0,0,0"/>
             </Grid>
 
             <StackPanel Grid.Row="1">
-                <Button Margin="5" Background="BlueViolet" BorderBrush="BlueViolet">
+                <Button x:Name="ButtonShowFullInfo" Margin="5" Background="BlueViolet" BorderBrush="BlueViolet">
                     <Grid Width="185">
                         <materialDesign:PackIcon Kind="Show" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="SHOW FULL INFO" FontFamily="Arial"/>
@@ -53,7 +53,7 @@
                 <Button Margin="5" Background="BlueViolet" BorderBrush="BlueViolet" FontFamily="Arial">
                     <Grid Width="185">
                         <materialDesign:PackIcon Kind="Show" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="SHOW SHORT INFO" FontFamily="Bahnschrift Light"/>
+                        <TextBlock HorizontalAlignment="Center" Text="SHOW SHORT INFO" FontFamily="Arial"/>
                     </Grid>
                 </Button>
                 <Button Margin="5" Background="BlueViolet" BorderBrush="BlueViolet">
@@ -62,7 +62,7 @@
                         <TextBlock HorizontalAlignment="Center" Text="SHOW INFO AS TABLE" FontFamily="Arial"/>
                     </Grid>
                 </Button>
-                <Button Margin="5" Background="BlueViolet" BorderBrush="BlueViolet">
+                <Button x:Name="ButtonUpdateInfo" Margin="5" Background="BlueViolet" BorderBrush="BlueViolet" Click="ButtonUpdateInfo_OnClick">
                     <Grid Width="185">
                         <materialDesign:PackIcon Kind="Update" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="UPDATE INFO" FontFamily="Arial"/>
