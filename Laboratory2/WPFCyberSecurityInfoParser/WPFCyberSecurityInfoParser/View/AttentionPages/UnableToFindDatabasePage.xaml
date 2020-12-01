@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCyberSecurityInfoParser"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="150" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        mc:Ignorable="d" Height="150" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="Images/cctv.png">
     <Grid Background="#FFDADADA">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -31,14 +31,14 @@
         </Grid>
 
         <Grid Grid.Row="2">
-            <Button x:Name="ButtonOk" Margin="10" Background="BlueViolet" BorderBrush="BlueViolet" Height="50" Width="100" Click="ButtonClose_OnClick">
+            <Button x:Name="ButtonOk" Margin="10" Background="#FF575C5F" BorderBrush="FF575C5F" Height="50" Width="100" Click="ButtonClose_OnClick">
                 <TextBlock TextWrapping="Wrap" Text="OK" FontFamily="Arial"/>
             </Button>
         </Grid>
 
 
 
-        <Grid x:Name="GridBarTitle" Background="BlueViolet">
+        <Grid x:Name="GridBarTitle" Background="#FF575C5F">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
                 <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_OnClick">
                     <materialDesign:PackIcon Kind="Close"></materialDesign:PackIcon>

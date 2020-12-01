@@ -1,24 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WPFCyberSecurityInfoParser.View.AttentionPages;
 
 namespace WPFCyberSecurityInfoParser.View
 {
     /// <summary>
-    /// Логика взаимодействия для DownloadDataDialogPage.xaml
+    /// Логика взаимодействия для DownloadDataDialogWindow.xaml
     /// </summary>
     public partial class DownloadDataDialogPage : Window
     {
@@ -36,7 +24,7 @@ namespace WPFCyberSecurityInfoParser.View
         {
             using (var webClient = new WebClient())
             {
-                const string url = "https://bdu.fstec.ru/files/documents/thrlist.xlsx";
+                const string url = @"https://bdu.fstec.ru/files/documents/thrlist.xlsx";
                 const string path = "thrlist.xlsx";
 
                 try
@@ -51,8 +39,30 @@ namespace WPFCyberSecurityInfoParser.View
                 }
             }
 
+            
+            var successPage = new SuccessPage() { Owner = this };
+            successPage.ShowDialog();
+            Close();
+        }
+
+        private void ButtonFileSystemDownload_OnClick(object sender, RoutedEventArgs e)
+        {
+            var downloadDatabaseFromFileSystem = new DownloadDatabaseFromFileSystem();
+
+            try
+            {
+                downloadDatabaseFromFileSystem.ShowDialog();
+            }
+            catch (Exception)
+            {
+                var unableToDownloadPage = new UnableToDownloadDataBasePage { Owner = this };
+                unableToDownloadPage.ShowDialog();
+                return;
+            }
+
             var successPage = new SuccessPage() {Owner = this};
             successPage.ShowDialog();
+
             Close();
         }
     }

@@ -1,0 +1,31 @@
+﻿<Page x:Class="WPFCyberSecurityInfoParser.View.ViewFullDatabasePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFCyberSecurityInfoParser.View"
+      xmlns:types="clr-namespace:WPFCyberSecurityInfoParser.Model.Types"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1200"
+      Title="ViewFullDatabase"
+      Background="#FFDADADA"
+      Initialized="ViewFullDatabasePage_OnInitialized">
+
+    <Grid>
+        <DataGrid x:Name="FullDatabaseDataGrid" AutoGenerateColumns="False"
+                  HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White"
+                  DataContext="_collection">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=(types:ThreatData.Id)}" Width="50"/>
+                <DataGridTextColumn Header="Название угрозы" Binding="{Binding Path=(types:ThreatData.Name)}" Width="100"/>
+                <DataGridTextColumn Header="Описание угрозы" Binding="{Binding Path=(types:ThreatData.Description)}" Width="200"/> 
+                <DataGridTextColumn Header="Источник угрозы" Binding="{Binding Path=(types:ThreatData.ThreatSource)}" Width="200"/>
+                <DataGridTextColumn Header="Объект воздействия" Binding="{Binding Path=(types:ThreatData.ImpactObject)}" Width="200"/>
+                <DataGridTextColumn Header="Нарушение конфиденциальности" Binding="{Binding Path=(types:ThreatData.IsPrivacyViolation)}" Width="100"/>
+                <DataGridTextColumn Header="Нарушение целостности" Binding="{Binding Path=(types:ThreatData.IsIntegrityViolation)}" Width="100"/>
+                <DataGridTextColumn Header="Нарушение доступности" Binding="{Binding Path=(types:ThreatData.IsAvailabilityViolation)}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WPFCyberSecurityInfoParser.Model.Types;
 using WPFCyberSecurityInfoParser.View;
 
 namespace WPFCyberSecurityInfoParser
@@ -21,6 +12,8 @@ namespace WPFCyberSecurityInfoParser
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<ThreatData> ObservableCollection { get; set; } = null;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -52,7 +45,24 @@ namespace WPFCyberSecurityInfoParser
 
         private void ButtonShowFullInfo_OnClick(object sender, RoutedEventArgs e)
         {
-           MainFrame.NavigationService.Navigate(new Uri("View/ViewFullDatabase.xaml", UriKind.Relative));
+           MainFrame.NavigationService.Navigate(new Uri("View/ViewFullDatabasePage.xaml", UriKind.Relative));
+        }
+
+        private void ButtonShowShortInfo_OnClick(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Uri("View/ViewReducedDatabasePage.xaml", UriKind.Relative));
+        }
+
+        private void ButtonUploadInfo_OnClick(object sender, RoutedEventArgs e)
+        {
+            var uploadOnDiskWindow = new UploadOnDiskWindow();
+            uploadOnDiskWindow.ShowDialog();
+        }
+
+        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            var applicationStartWindow = new ApplicationStartWindow();
+            applicationStartWindow.ShowDialog();
         }
     }
 }
