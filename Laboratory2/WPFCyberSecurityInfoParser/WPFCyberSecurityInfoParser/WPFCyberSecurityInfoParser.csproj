@@ -81,6 +81,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\FstekParser.cs" />
+    <Compile Include="Model\Types\ComparedData.cs" />
     <Compile Include="Model\Types\ShortThreatData.cs" />
     <Compile Include="Model\Types\ThreatData.cs" />
     <Compile Include="View\ApplicationStartWindow.xaml.cs">
@@ -103,6 +104,9 @@
     </Compile>
     <Compile Include="View\DownloadDataDialogWindow.xaml.cs">
       <DependentUpon>DownloadDataDialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateDatabaseWindow.xaml.cs">
+      <DependentUpon>UpdateDatabaseWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UploadOnDiskWindow.xaml.cs">
       <DependentUpon>UploadOnDiskWindow.xaml</DependentUpon>
@@ -150,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DownloadDataDialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateDatabaseWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

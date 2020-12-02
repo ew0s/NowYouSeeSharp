@@ -40,8 +40,8 @@ namespace WPFCyberSecurityInfoParser
 
         private void ButtonUpdateInfo_OnClick(object sender, RoutedEventArgs e)
         {
-            var downloadDataDialogPage = new DownloadDataDialogPage();
-            downloadDataDialogPage.ShowDialog();
+            var updateDatabaseWindow = new UpdateDatabaseWindow();
+            updateDatabaseWindow.ShowDialog();
         }
 
         private void ButtonShowFullInfo_OnClick(object sender, RoutedEventArgs e)

@@ -79,8 +79,7 @@ namespace WPFCyberSecurityInfoParser.View
                 return;
             }
 
-            _currentPageNumber = number;
-            GenerateCurrentPage(_currentPageNumber);
+            GenerateCurrentPage(number);
         }
     }
 }

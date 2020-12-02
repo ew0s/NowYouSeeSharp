@@ -56,5 +56,43 @@ namespace WPFCyberSecurityInfoParser.Model
 
             return shortObservableCollection;
         }
+
+        public static void GenerateComparedCollection(
+            ObservableCollection<ThreatData> collectionBefore,
+            ObservableCollection<ThreatData> collectionAfter,
+            out ObservableCollection<ThreatData> comparedCollection)
+        {
+            comparedCollection = new ObservableCollection<ThreatData>();
+
+            for (var i = 0; i < collectionBefore.Count; i++)
+            {
+                if (i == collectionAfter.Count) break;
+                comparedCollection.Add(new ThreatData
+                {
+                    Id = collectionBefore[i].Id == collectionAfter[i].Id ? "-" : collectionAfter[i].Id,
+                    Description = collectionBefore[i].Description == collectionAfter[i].Description
+                        ? "-"
+                        : collectionAfter[i].Description,
+                    Name = collectionBefore[i].Name == collectionAfter[i].Name ? "-" : collectionAfter[i].Name,
+                    ImpactObject = collectionBefore[i].ImpactObject == collectionAfter[i].ImpactObject
+                        ? "-"
+                        : collectionAfter[i].ImpactObject,
+                    ThreatSource = collectionBefore[i].ThreatSource == collectionAfter[i].ThreatSource
+                        ? "-"
+                        : collectionAfter[i].ThreatSource,
+                    IsAvailabilityViolation = collectionBefore[i].IsAvailabilityViolation ==
+                                              collectionAfter[i].IsAvailabilityViolation
+                        ? "-"
+                        : collectionAfter[i].IsAvailabilityViolation,
+                    IsIntegrityViolation = collectionBefore[i].IsIntegrityViolation ==
+                                           collectionAfter[i].IsIntegrityViolation
+                        ? "-"
+                        : collectionAfter[i].IsIntegrityViolation,
+                    IsPrivacyViolation = collectionBefore[i].IsPrivacyViolation == collectionAfter[i].IsPrivacyViolation
+                        ? "-"
+                        : collectionAfter[i].IsPrivacyViolation
+                });
+            }
+        }
     }
 }

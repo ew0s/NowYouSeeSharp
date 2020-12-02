@@ -36,6 +36,7 @@ namespace WPFCyberSecurityInfoParser.View
                 return;
             }
 
+            _currentPageNumber = pageNumber;
             _currentPageCollection.Clear();
             for (var i = (pageNumber - 1) * RowsPerPage; i < pageNumber * RowsPerPage; i++)
             {
@@ -78,8 +79,7 @@ namespace WPFCyberSecurityInfoParser.View
                 return;
             }
 
-            _currentPageNumber = number;
-            GenerateCurrentPage(_currentPageNumber);
+            GenerateCurrentPage(number);
         }
     }
 }

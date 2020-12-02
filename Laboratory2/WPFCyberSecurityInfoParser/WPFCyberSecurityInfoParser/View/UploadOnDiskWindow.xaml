@@ -35,10 +35,10 @@
                 <DropShadowEffect Color="#FFC7C7C7" RenderingBias="Quality" ShadowDepth="1" BlurRadius="20"/>
             </Grid.Effect>
             <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="Enter path to directory:" TextAlignment="Left" VerticalAlignment="Top" Height="20" Width="268" FontSize="14"/>
-            <TextBox HorizontalAlignment="Left" Height="25" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="379" Background="White"/>
+            <TextBox x:Name="FilePath" Grid.Row="0" HorizontalAlignment="Left" Height="25" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="379" Background="White"/>
 
             <Grid Row="1">
-                <Button x:Name="ButtonOk" Margin="5" Background="#FF575C5F" BorderBrush="#FF575C5F" Height="40" Width="100" Click="ButtonClose_OnClick">
+                <Button x:Name="ButtonOk" Margin="5" Background="#FF575C5F" BorderBrush="#FF575C5F" Height="40" Width="100" Click="ButtonOk_OnClick">
                     <TextBlock TextWrapping="Wrap" Text="OK" FontFamily="Arial"/>
                 </Button>
             </Grid>
