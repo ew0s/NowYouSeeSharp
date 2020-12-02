@@ -4,14 +4,48 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFCyberSecurityInfoParser.View"
+      xmlns:types="clr-namespace:WPFCyberSecurityInfoParser.Model.Types"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1200"
       Title="ViewFullDatabase"
       Background="#FFDADADA"
-      Initialized="ViewReducedDatabase_OnInitialized">
+      Initialized="ViewFullDatabasePage_OnInitialized">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REDUCED DATABASE" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid x:Name="FullDatabaseDataGrid" AutoGenerateColumns="False" GridLinesVisibility="All"
+                      HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White"
+                      DataContext="_collection" IsReadOnly="True">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path=(types:ShortThreatData.Id)}" Width="400"/>
+                    <DataGridTextColumn Header="Название угрозы" Binding="{Binding Path=(types:ShortThreatData.Name)}" Width="800"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+        <TextBox x:Name="SelectPageTextBox" Background="White" HorizontalAlignment="Left" Height="30" Margin="200,35,0,35"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="50"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="10,41,0,41" Grid.Row="1" TextWrapping="Wrap" Text="Enter page you want to switch to:" TextAlignment="Center" VerticalAlignment="Center" Width="177"/>
+        <Button Grid.Row="1" x:Name="ButtonOk" Margin="273,35,857,35" Background="#FF575C5F" BorderBrush="#FF575C5F" Height="30" Width="70" Click="ButtonOk_OnClick">
+            <TextBlock TextWrapping="Wrap" Text="OK" FontFamily="Arial"/>
+        </Button>
+        <Button Grid.Row="1" x:Name="ButtonNextPage" Margin="621,35,429,35" Background="#FF575C5F" BorderBrush="#FF575C5F" Height="30" Width="150" Click="ButtonNextPage_OnClick">
+            <TextBlock TextWrapping="Wrap" Text="Next page" FontFamily="Arial"/>
+        </Button>
+        <Button Grid.Row="1" x:Name="ButtonPrevPage" Margin="428,35,622,35" Background="#FF575C5F" BorderBrush="#FF575C5F" Height="30" Width="150" Click="ButtonPrevPage_OnClick">
+            <TextBlock TextWrapping="Wrap" Text="Previous page" FontFamily="Arial"/>
+        </Button>
+
+        <TextBlock Grid.Row="1" Background="White" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,42,299,38">
+            <TextBlock Name="CurrentPage" Height="20" Width="40" Margin="5,0,0,0" TextAlignment="Right"/>
+            <TextBlock Text=" / "/>
+            <TextBlock Name="CountOfPages" Height="20" Width="40" Margin="0,0,0,0" TextAlignment="Left"/>
+        </TextBlock>
 
     </Grid>
 </Page>

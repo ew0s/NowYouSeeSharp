@@ -1,12 +1,13 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows;
 using ClosedXML.Excel;
 using WPFCyberSecurityInfoParser.Model.Types;
 
 namespace WPFCyberSecurityInfoParser.Model
 {
-    public static class FstekParser
+    public static class  FstekParser
     {
-        public static ObservableCollection<ThreatData> Parse(string pathToXlsx)
+        public static ObservableCollection<ThreatData> ParseFullDatabase(string pathToXlsx)
         {
             var observableCollection = new ObservableCollection<ThreatData>();
 
@@ -38,6 +39,22 @@ namespace WPFCyberSecurityInfoParser.Model
             }
 
             return observableCollection;
+        }
+
+        public static ObservableCollection<ShortThreatData> ParseShortDatabase(ObservableCollection<ThreatData> observableCollection)
+        {
+            var shortObservableCollection = new ObservableCollection<ShortThreatData>();
+
+            foreach (var threatData in observableCollection)
+            {
+                shortObservableCollection.Add(new ShortThreatData
+                {
+                    Id = threatData.Id,
+                    Name = threatData.Name
+                });
+            }
+
+            return shortObservableCollection;
         }
     }
 }

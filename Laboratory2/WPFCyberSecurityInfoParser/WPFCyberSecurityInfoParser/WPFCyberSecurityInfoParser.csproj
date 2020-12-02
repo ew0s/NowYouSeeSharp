@@ -81,6 +81,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\FstekParser.cs" />
+    <Compile Include="Model\Types\ShortThreatData.cs" />
     <Compile Include="Model\Types\ThreatData.cs" />
     <Compile Include="View\ApplicationStartWindow.xaml.cs">
       <DependentUpon>ApplicationStartWindow.xaml</DependentUpon>

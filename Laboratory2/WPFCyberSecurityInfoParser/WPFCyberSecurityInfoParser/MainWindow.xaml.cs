@@ -13,6 +13,7 @@ namespace WPFCyberSecurityInfoParser
     public partial class MainWindow : Window
     {
         public ObservableCollection<ThreatData> ObservableCollection { get; set; } = null;
+        public ObservableCollection<ShortThreatData> ShortObservableCollection { get; set; } = null;
 
         public MainWindow()
         {

@@ -27,7 +27,9 @@ namespace WPFCyberSecurityInfoParser.View
                 try
                 {
                     webClient.DownloadFile(url, path);
-                    _mainWindow.ObservableCollection = FstekParser.Parse(path);
+                    _mainWindow.ObservableCollection = FstekParser.ParseFullDatabase(path);
+                    _mainWindow.ShortObservableCollection =
+                        FstekParser.ParseShortDatabase(_mainWindow.ObservableCollection);
                 }
                 catch (Exception)
                 {
