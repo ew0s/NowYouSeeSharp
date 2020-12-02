@@ -63,6 +63,7 @@ namespace WPFCyberSecurityInfoParser
         {
             var applicationStartWindow = new ApplicationStartWindow();
             applicationStartWindow.ShowDialog();
+            MainFrame.NavigationService.Navigate(new Uri("View/ViewFullDatabasePage.xaml", UriKind.Relative));
         }
     }
 }

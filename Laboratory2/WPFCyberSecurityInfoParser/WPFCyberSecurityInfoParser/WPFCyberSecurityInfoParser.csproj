@@ -85,6 +85,9 @@
     <Compile Include="View\ApplicationStartWindow.xaml.cs">
       <DependentUpon>ApplicationStartWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AttentionPages\InvalidPageCountWindow.xaml.cs">
+      <DependentUpon>InvalidPageCountWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AttentionPages\SuccessPage.xaml.cs">
       <DependentUpon>SuccessPage.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\ApplicationStartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttentionPages\InvalidPageCountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

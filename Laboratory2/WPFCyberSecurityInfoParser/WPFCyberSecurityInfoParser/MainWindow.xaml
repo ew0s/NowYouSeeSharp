@@ -8,7 +8,7 @@
         xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
         Icon="Images/cctv.png"
-        Height="450" Width="1200"
+        Height="700" Width="1420"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"
         Loaded="MainWindow_OnLoaded">
 
@@ -29,6 +29,10 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="1" Margin="0,0,1,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="155*"/>
+                <ColumnDefinition Width="64*"/>
+            </Grid.ColumnDefinitions>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFE8E8E8" Offset="0.992"/>
@@ -44,11 +48,11 @@
                 <DropShadowEffect Color="#FFC7C7C7" RenderingBias="Quality" ShadowDepth="1" BlurRadius="20"/>
             </Grid.Effect>
 
-            <Grid Background="#FF6D7275">
+            <Grid Background="#FF6D7275" Grid.ColumnSpan="2">
                 <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Images/security-camera.png" Margin="-1,0,0,0"/>
             </Grid>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
                 <Button x:Name="ButtonShowFullInfo" Margin="5" Background="#FF575C5F" BorderBrush="#FF575C5F" Click="ButtonShowFullInfo_OnClick">
                     <Grid Width="185">
                         <materialDesign:PackIcon Kind="Show" VerticalAlignment="Center"/>
@@ -77,9 +81,7 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <Frame Name="MainFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-            </ScrollViewer>
+            <Frame Name="MainFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
         </Grid>
 
         <Grid x:Name="GridBarTitle" Grid.ColumnSpan="2" Background="#FF3E4249" MouseDown="GridBarTitle_OnMouseDown">
