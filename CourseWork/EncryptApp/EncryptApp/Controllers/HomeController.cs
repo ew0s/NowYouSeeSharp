@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using EncryptAppBusinessLayer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -19,15 +20,14 @@ namespace EncryptApp.Controllers
         {
             return View();
         }
-        
         public IActionResult Privacy()
         {
             return View();
         }
 
-        public IActionResult test()
+        public string GetId(int id)
         {
-            return View();
+            return id.ToString();
         }
 
         [HttpPost]
@@ -37,7 +37,14 @@ namespace EncryptApp.Controllers
             var path = "/Files/" + uploadedFile.FileName;
             await using var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create);
             await uploadedFile.CopyToAsync(fileStream);
+            
 
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Menu()
+        {
             return RedirectToAction("Index");
         }
     }
