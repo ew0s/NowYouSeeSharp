@@ -1,0 +1,28 @@
+@model IEnumerable<EncryptApp.Models.FileModel>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style type="text/css">
+   p {
+   font-family: 'Press Start 2P', cursive;
+   font-size: 180%;
+   text-align: left;
+   }
+   P.fig {
+   text-align: right;
+   }
+</style>
+
+<p>Choose action<p/>
+
+<form asp-action="Menu" asp-controller="Home" method="get">
+    <input type="button" name="Encrypt" value="Encrypt file"/>
+    <input type="button" name="Decrypt" value="Decrypt file" />
+</form>
+
+<p class="fig">
+    <img src="images/image-le-chiffre-de-vigenere.png" width="700" alt="Иллюстрация">
+</p>
