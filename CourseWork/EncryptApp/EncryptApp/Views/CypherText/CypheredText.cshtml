@@ -1,2 +1,29 @@
-@model string
-@Html.TextArea("encryptedText", @ViewBag.Message, 10, 100, null)
+@model EncryptedTextModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style type="text/css">
+       textarea{
+       font-family: Hack, monospace;
+       background-color: black;
+       color: #149414;
+       }
+       p{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 130%;
+       text-align: left;
+       }
+       input{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 120%;
+       text-align: left;
+       }
+</style>
+<p>Encrypted text</p>
+@using (Html.BeginForm("GoBack", "CypherText", FormMethod.Post))
+{
+    @Html.TextArea("txt", Model.Text, 10, 60, null)<br><br>
+    <input type="submit" value="Go back">
+}
