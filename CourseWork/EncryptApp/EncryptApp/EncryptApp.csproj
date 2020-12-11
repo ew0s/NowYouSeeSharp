@@ -15,10 +15,15 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="wwwroot\Images\image-le-chiffre-de-vigenere1.png" />
       <_ContentIncludedByDefault Remove="wwwroot\Images\unnamed.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\music\MatrixMP3.mp3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\EncryptAppBusinessLayer\EncryptAppBusinessLayer.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.1" />
     </ItemGroup>
 
 </Project>

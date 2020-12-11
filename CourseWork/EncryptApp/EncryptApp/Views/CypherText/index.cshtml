@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Load file";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cipher text</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    <style type="text/css">
+       textarea{
+       font-family: Hack, monospace;
+       background-color: black;
+       color: #149414;
+       }
+       p{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 130%;
+       text-align: left;
+       }
+       input{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 120%;
+       text-align: left;
+       }
+       span{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 120%;
+       text-align: left;
+       }
+    </style>
+</head>
+<body>
+@using (Html.BeginForm("CypheredText", "CypherText", FormMethod.Post))
+{
+    <p>Enter text</p>
+    @Html.TextArea("text", "", 10, 100, null)<br><br>
+    @Html.RadioButton("cypherType", "Encrypt")
+    <span>Encrypt</span>
+    @Html.RadioButton("cypherType", "Decrypt")
+    <span>Decrypt</span>
+    
+    <input type="submit" value="Send"/>
+}
+<br><br>
+
+@Html.Action()
+
+</body>
+</html>
