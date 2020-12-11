@@ -1,4 +1,4 @@
-using System;
+using EncryptApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EncryptApp.Controllers
@@ -7,13 +7,18 @@ namespace EncryptApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new EncryptedTextModel("hi"));
         }
         
-        
+        [HttpPost]
         public IActionResult CypheredText(string text, string cypherType)
         {
-            return PartialView(text);
+            return View(new EncryptedTextModel(text));
+        }
+
+        public IActionResult GoBack()
+        {
+            return RedirectToAction("Index");
         }
     }
 }

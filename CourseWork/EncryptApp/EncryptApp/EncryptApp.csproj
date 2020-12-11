@@ -16,6 +16,7 @@
       <_ContentIncludedByDefault Remove="wwwroot\Images\image-le-chiffre-de-vigenere1.png" />
       <_ContentIncludedByDefault Remove="wwwroot\Images\unnamed.png" />
       <_ContentIncludedByDefault Remove="wwwroot\music\MatrixMP3.mp3" />
+      <_ContentIncludedByDefault Remove="Views\Shared\Components\EncryptedText\Default.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -24,6 +25,7 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.1" />
+      <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
     </ItemGroup>
 
 </Project>
