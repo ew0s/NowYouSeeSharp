@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\contact us\test.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Files" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\Images\image-le-chiffre-de-vigenere1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Images\unnamed.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EncryptAppBusinessLayer\EncryptAppBusinessLayer.csproj" />
+    </ItemGroup>
+
+</Project>

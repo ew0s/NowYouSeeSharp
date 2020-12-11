@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptApp", "EncryptApp\EncryptApp.csproj", "{DB0607B5-9962-4AE9-B8C0-A1F534C80BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptAppBusinessLayer", "EncryptAppBusinessLayer\EncryptAppBusinessLayer.csproj", "{D5341E8B-9353-4CA7-BA2B-6182E8D34954}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB0607B5-9962-4AE9-B8C0-A1F534C80BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0607B5-9962-4AE9-B8C0-A1F534C80BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0607B5-9962-4AE9-B8C0-A1F534C80BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0607B5-9962-4AE9-B8C0-A1F534C80BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
