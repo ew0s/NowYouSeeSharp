@@ -1,6 +1,6 @@
 # [Course work NYSS]()
 ---
-![img](../../Images/pepe.gif)
+![img](https://steamuserimages-a.akamaihd.net/ugc/959713897117284086/A6CC7F1EC63823CDA98784A9988A488B871DDD16/)
 ---
 ## About app
 * Приложение по шифрованию данных, которое реализовано на стеке технологий .NET с использованием ASP.NET
