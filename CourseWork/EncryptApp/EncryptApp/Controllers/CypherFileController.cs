@@ -20,6 +20,11 @@ namespace EncryptApp.Controllers
         public async Task<IActionResult> CypheredText(IFormFile uploadedFile, string cypherType, string key)
         {
             if (uploadedFile == null) return RedirectToAction("Index");
+            var fileInfo = new FileInfo(uploadedFile.FileName);
+            if (fileInfo.Extension != ".txt" && fileInfo.Extension != ".doc" && fileInfo.Extension != ".docx")
+            {
+                return RedirectToAction("Index");
+            }
             if (string.IsNullOrEmpty(key))
             {
                 return RedirectToAction("Index");
