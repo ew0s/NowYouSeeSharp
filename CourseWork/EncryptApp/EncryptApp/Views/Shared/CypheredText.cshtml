@@ -22,8 +22,15 @@
        }
 </style>
 <p>Encrypted text</p>
-@using (Html.BeginForm("GoBack", "CypherText", FormMethod.Post))
+@using (Html.BeginForm("GoBack", null, FormMethod.Post))
 {
     @Html.TextArea("txt", Model.Text, 10, 60, null)<br><br>
     <input type="submit" value="Go back">
+}
+<br>
+<p>Enter directory to save file</p>
+@using (Html.BeginForm("DownloadFile", null, FormMethod.Post))
+{
+    @Html.TextArea("filePath", "", 2, 100, null)<br><br>
+    <input type="submit" value="Save file">
 }

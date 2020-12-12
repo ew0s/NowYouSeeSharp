@@ -16,12 +16,7 @@
        font-size: 130%;
        text-align: left;
        }
-       input{
-       font-family: 'Press Start 2P', cursive;
-       font-size: 120%;
-       text-align: left;
-       }
-       span{
+       input, span{
        font-family: 'Press Start 2P', cursive;
        font-size: 120%;
        text-align: left;
@@ -33,11 +28,13 @@
 {
     <p>Enter text</p>
     @Html.TextArea("text", "", 10, 100, null)<br><br>
+    <p>Enter key</p>
+    @Html.TextArea("key", "", 2, 40, null)<br><br>         
     @Html.RadioButton("cypherType", "Encrypt")
     <span>Encrypt</span>
-    @Html.RadioButton("cypherType", "Decrypt")
+    @Html.RadioButton("cypherType", "Decrypt", true)
     <span>Decrypt</span>
-    
+
     <input type="submit" value="Send"/>
 }
 
