@@ -22,5 +22,10 @@ namespace EncryptApp.Controllers
         {
             return Redirect("/../CypherText/index");
         }
+
+        public RedirectResult FileCipher()
+        {
+            return Redirect("/../CypherFile/index");
+        }
     }
 }

@@ -28,9 +28,11 @@
     <input type="submit" value="Go back">
 }
 <br>
-<p>Enter directory to save file</p>
 @using (Html.BeginForm("DownloadFile", null, FormMethod.Post))
 {
-    @Html.TextArea("filePath", "", 2, 100, null)<br><br>
+    <p>Enter directory to save file</p>
+    @Html.TextArea("directoryPath", "", 2, 100, null)<br><br>
+    <p>Enter file name</p>
+    @Html.TextArea("fileName", "", 2, 100, null)<br><br>
     <input type="submit" value="Save file">
 }

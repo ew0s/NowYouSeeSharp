@@ -1,5 +1,6 @@
+@model IEnumerable<EncryptApp.Models.FileModel>
 @{
-    ViewData["Title"] = "Cypher text";
+    ViewData["Title"] = "Cypher file";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -27,19 +28,16 @@
     </style>
 </head>
 <body>
-@using (Html.BeginForm("CypheredText", "CypherText", FormMethod.Post))
-{
-    <p>Enter text</p>
-    @Html.TextArea("text", "", 10, 100, null)<br><br>
+<p>Select file to upload</p>
+<form asp-action="CypheredText" asp-controller="CypherFile" method="post" enctype="multipart/form-data">
+    <input type="file" name="uploadedFile"/><br><br>
+    <input type="submit" value="Upload file"/><br><br>
     <p>Enter key</p>
-    @Html.TextArea("key", "", 2, 40, null)<br><br>         
+    @Html.TextArea("key", "", 2, 40, null)<br><br>
     @Html.RadioButton("cypherType", "Encrypt")
     <span>Encrypt</span>
     @Html.RadioButton("cypherType", "Decrypt", true)
     <span>Decrypt</span>
-
-    <input type="submit" value="Send"/>
-}
-
+</form>
 </body>
 </html>
