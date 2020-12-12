@@ -2,20 +2,14 @@ using System;
 using System.IO;
 using EncryptApp.Models;
 using EncryptAppBusinessLayer;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EncryptApp.Controllers
 {
     public class CypherTextController : Controller
     {
-        private readonly IWebHostEnvironment _appEnvironment;
         private static string _encryptedText;
- 
-        public CypherTextController(IWebHostEnvironment appEnvironment)
-        {
-            _appEnvironment = appEnvironment;
-        }
+
         public IActionResult Index()
         {
             return View();

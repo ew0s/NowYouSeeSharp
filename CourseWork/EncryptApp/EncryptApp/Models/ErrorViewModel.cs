@@ -1,10 +1,13 @@
-using System;
-
 namespace EncryptApp.Models
 {
     public class ErrorViewModel
     {
-        public string RequestId { get; set; }
+        public ErrorViewModel(string requestId)
+        {
+            RequestId = requestId;
+        }
+
+        public string RequestId { get; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -8,14 +7,12 @@ namespace EncryptApp
 {
     public class Startup
     {
-        public Startup(IWebHostEnvironment env, IConfiguration configuration)
+        public Startup(IWebHostEnvironment env)
         {
-            Configuration = configuration;
             Env = env;
         }
 
-        public IConfiguration Configuration { get; }
-        public IWebHostEnvironment Env { get; set; }
+        private IWebHostEnvironment Env { get; }
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -53,8 +50,8 @@ namespace EncryptApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
