@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptApp", "EncryptApp\En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptAppBusinessLayer", "EncryptAppBusinessLayer\EncryptAppBusinessLayer.csproj", "{D5341E8B-9353-4CA7-BA2B-6182E8D34954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptAppTests", "EncryptAppTests\EncryptAppTests.csproj", "{A51227B8-7A6C-4975-B4BD-30B879087EC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5341E8B-9353-4CA7-BA2B-6182E8D34954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51227B8-7A6C-4975-B4BD-30B879087EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51227B8-7A6C-4975-B4BD-30B879087EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51227B8-7A6C-4975-B4BD-30B879087EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51227B8-7A6C-4975-B4BD-30B879087EC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
